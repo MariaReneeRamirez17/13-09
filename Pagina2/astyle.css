@@ -1,0 +1,140 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow: auto;
+  background: linear-gradient(180deg, #ea7695, #c4131c);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.contenido {
+  position: relative;
+  z-index: 10;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+
+  animation: aparecer 0.8s ease;
+}
+
+.Aclaracion {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #030107, #3c3c3d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: rgb(237, 237, 237);
+}
+
+.parrafo {
+  color: white;
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 20px auto 35px auto;
+  padding: 35px;
+
+  background: rgba(167, 157, 218, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1px solid rgba(167, 157, 218, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.imagen-regalo {
+  max-width: 300px;
+  width: 80%;
+  height: auto;
+  border-radius: 14px;
+  margin: 10px 0 25px 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.boton-redireccion {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ab29a2, #b81f1f);
+  padding: 14px 34px;
+  border-radius: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton-redireccion:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 22px rgba(242, 143, 237, 0.45);
+}
+
+.contenedor-collage {
+  column-count: 2;
+  column-gap: 10px;
+  max-width: 1000px;
+  margin: 20px auto 60px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.contenedor-collage img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+@media (min-width: 600px) {
+  .contenedor-collage {
+    column-count: 3;
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emoji {
+  position: fixed;
+  top: -50px;
+  font-size: 2rem;
+  animation-name: caer;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes caer {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.8;
+  }
+}

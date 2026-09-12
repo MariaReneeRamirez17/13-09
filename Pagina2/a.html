@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aclaración</title>
+    <link rel="stylesheet" href="astyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="astyle.css">
+</head>
+
+<body>
+    <div class="contenido">
+        <div class="Aclaracion">Bueeeno...</div>
+        <div class="parrafo">
+            <p>La verdad no soy deq la mejor haciendo este tipo de cositas, aun tengo mucho que aprender pero con
+                lo poco que se y con lo poco que pues quise "aprender" para esto, te queria hacer un regalito digamos,
+                un detallito desde mi corazón</p>
+            <p>Intenté hacer esto lo mejor posible oye asi que aja o bueno que se viera bonito 🥺🥺 </p>
+            <p>Y bueno llevo aproximadamente una semanita haciendo esto, o cachito más, asi que espero que te guste 💓
+            </p>
+            <p>Si hay más de alguna falta de ortografía o algo asi perdónnn 😭😭</p>
+        </div>
+        <img src="/Imagenes/EXTRA/62fef314ae968a23fe4e3731311325bd.png" alt="" class="imagen-regalo">
+        <a href="../Pagina3/c.html" class="boton-redireccion">continuar!💓</a>
+    </div>
+    <script>  const emojis = ["💕", "💗", "💘", "💓", "💖"];
+
+        function crearEmoji() {
+            const emoji = document.createElement("div");
+            emoji.classList.add("emoji");
+            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+            emoji.style.left = Math.random() * 100 + "vw";
+
+            const duracion = 4 + Math.random() * 6;
+            emoji.style.animationDuration = duracion + "s";
+            emoji.style.fontSize = (1.5 + Math.random() * 2) + "rem";
+
+            document.body.appendChild(emoji);
+
+            setTimeout(() => {
+                emoji.remove();
+            }, duracion * 1000);
+        }
+        setInterval(crearEmoji, 300);
+    </script>
+</body>
+
+</html>

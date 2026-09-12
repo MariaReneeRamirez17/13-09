@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13/09</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenido">
+        <div class="fecha">13/09</div>
+        <div class="parrafo">Oye amor, sabes que nos conocemos exactamente desde hace 4 años no? Bueno quise hacer este pequeño detalle para ti 💓 </div>
+        <img src="/Imagenes/EXTRA/PRIMERO.jpg" alt="" class="imagen-regalo">
+    <a href="../Pagina2/a.html" class="boton-redireccion">continuar!💓</a>    </div>
+
+    <script>
+    const emojis = ["🌸", "⚜️", "🌼", "🪷", "💞"];
+
+    function crearEmoji() {
+      const emoji = document.createElement("div");
+      emoji.classList.add("emoji");
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+      emoji.style.left = Math.random() * 100 + "vw";
+
+      const duracion = 4 + Math.random() * 6;
+      emoji.style.animationDuration = duracion + "s";
+      emoji.style.fontSize = (1.5 + Math.random() * 2) + "rem";
+
+      document.body.appendChild(emoji);
+
+      setTimeout(() => {
+        emoji.remove();
+      }, duracion * 1000);
+    }
+    setInterval(crearEmoji, 300);
+
+  </script>
+</body>
+
+ 
+
+</html>

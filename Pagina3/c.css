@@ -1,0 +1,116 @@
+html, body {
+  margin: 0;
+  padding: 0;
+    background: linear-gradient(180deg, #cb6e6e, #c4131c);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  padding: 0 20px;
+  margin: 60px auto;
+  max-width: 600px;
+  animation: aparecer 1s ease;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+img {
+  display: block;
+  max-width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  animation: aparecer 1s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.contenedor-collage {
+  column-count: 2;
+  column-gap: 10px;
+  max-width: 1000px;
+  margin: 20px auto 60px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.contenedor-collage img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+@media (min-width: 600px) {
+  .contenedor-collage {
+    column-count: 3;
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emoji {
+  position: fixed;
+  top: -50px;
+  font-size: 2rem;
+  animation-name: caer;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes caer {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+.boton-redireccion {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background: linear-gradient(135deg, #e356d9, #b81f1f);
+    padding: 14px 34px;
+    border-radius: 30px;
+    margin: 40px auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton-redireccion:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 22px rgba(242, 143, 237, 0.45);
+}
